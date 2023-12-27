@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doc</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+  }
+
+  body {
+    background: #d7d7d7;
+  }
+
+  .form-container {
+    height: 600px;
+    width: 600px;
+    margin: 50px auto;
+  }
+
+  .form-container form {
+    height: 500px;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: coin-gradinent(form -45deg, pink, purple);
+    padding: 30px;
+    text-transform: capitalize;
+    border-radius: 30px;
+  }
+
+  .form-container h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 5px 0 5px 0;
+  }
+
+  .form-container form input,
+  textarea {
+    padding: 8px;
+    border-radius: 20px;
+    margin: 5px 0 5px 0;
+    border: none;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.3);
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+
+  .form-container form input[type="button"] {
+    align-self: flex-end;
+    height: 30px;
+    width: 60px;
+    font-size: 100%;
+  }
+</style>
+
+<body>
+  <div class="form-container">
+    <form action="" method="post">
+      <h3>Give Your Feedback</h3>
+      <label form="">name</label>
+      <input type="text" name="name" placeholder="name" required />
+      <label form="">Email</label>
+      <input type="text" name="email" placeholder="e-mail" required />
+      <label form="">Phone Number</label>
+      <input type="text" name="phone" placeholder="phone number" required />
+      <label form="">your message</label>
+      <textarea name="message" id="" cols="20" rows="8" placeholder="Your message" required></textarea>
+      <input type="submit" value="submit" />
+    </form>
+  </div>
+</body>
+
+<script>
+  if (<%= success %>) {
+    alert("Feedback Form Uploaded Successfully. ")
+  }
+</script>
+
+</html>

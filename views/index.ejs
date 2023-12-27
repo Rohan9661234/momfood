@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <!-- custom css file cdn link  -->
+  <!-- <link rel="stylesheet" href="http://localhost:8000///css/Home.css" /> -->
+  <link rel="stylesheet" href="http://localhost:8000///css/Home.css" />
+
+
+</head>
+
+
+
+
+<body>
+  <style>
+    div   a{
+      color: black;
+      margin: 2px;
+      padding: 4px;
+      flex-direction: row;
+      justify-content: space-around;
+      font-weight: 900;
+      font-size: 15px;
+    }
+    
+
+  </style>
+  <!-- header section starts  -->
+
+  <header class="header">
+    <a href="/" class="logo">
+      <i class="fas fa-utensils"></i> मां के हाथ का खाना
+    </a>
+
+    <h1>
+      <%=user%>
+    </h1>
+    <div class="icons">
+      <!-- <div class="fas fa-search" id="search-btn"></div> -->
+      <!-- <a href="/share"> -->
+      <div class="fas fa-share" id="theme-btn" onclick="share()"></div>
+      <!-- </a> -->
+
+      <script>
+        function share() {
+          if (navigator.share) {
+
+            navigator.share({
+              title: 'Maa ke Hath Ka Kahana', url: 'http://localhost:8000///'
+            })
+
+          }
+        }
+      </script>
+      <%if (user!=='no' ) {%>
+        <a href="/profile">
+          <div class="fas fa-user" id="login-btn"></div>
+        </a>
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <%} else {%>
+          <a href="/login">
+            <div class="fas fa-user" id="login-btn"></div>
+          </a>
+          <div class="fas fa-bars" id="menu-btn"></div>
+          <%}%>
+    </div>
+
+    <!-- <nav class="navbar2"> -->
+  <div>
+
+   <a href="#home">home</a>
+    <a href="#packages">packages</a> 
+    <!-- <a href="#pricing">pricing</a> -->
+      <a href="/feedback">review</a> 
+   
+       <a href="#contact">contact</a> 
+        <a href="/history">History</a> 
+    <!-- <a href="#blogs">blogs</a> -->
+  
+    <%if (user=='no user login' ) {%>
+         <a href="/login">Login</a> 
+      <%} else {%>
+          <a href="/logout">Logout</a> 
+        <%}%>
+  </div>
+    <!-- <nav class="navbar"> >  -->
+          <!-- </nav> -->
+
+          <!-- </nav> -->
+  </header>
+  <!-- 
+                  <style>
+                    @media screen and (width: 1990px) {
+                      .navbar2 {
+                        /* display: none; */
+                        font-size: 30px;
+                        padding-left: 50px;
+
+                      }
+                    }
+                  </st> -->
+  <!-- header section ends -->
+
+  <!-- home section starts  -->
+
+  <!-- home section ends -->
+
+  <!-- filter form section starts  -->
+
+  <!-- <section class="form-container" data-aos="zoom-in">
+                    <form action="">
+                      <div class="inputBox">
+                        <span>where</span>
+                        <input type="text" placeholder="search places" />
+                      </div>
+                      
+                      <div class="inputBox">
+                        <span>When</span>
+                        <input type="date" />
+                      </div>
+                      
+                      <div class="inputBox">
+                        <span>Time</span>
+                        <input type="time" />
+                      </div>
+                      
+                      <input type="submit" value="book now" class="btn" />
+                    </form>
+                  </section> -->
+  <!-- filter form section ends -->
+
+  <!-- packages section starts  -->
+
+  <section class="packages" id="packages">
+    <h1 class="heading">our <span>Tiffins</span></h1>
+
+    <div class="box-container">
+      <!-- <div class="box" data-aos="fade-up">
+                        <div class="image">
+                          <img src="images/blog-1.jpg" alt="" />
+                          <h3><i class="fas fa-utensils"></i> Burger</h3>
+                        </div>
+                        <div class="content">
+                          <div class="price">290.99 <span>350.99</span></div>
+                          <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero,
+              vitae.
+            </p>
+            <a href="#" class="btn"> Order now</a>
+          </div>
+        </div> -->
+      <!-- <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/blog-2.jpg" alt="" />
+            <h3><i class="fas fa-utensils"></i> Burger</h3>
+          </div>
+          <div class="content">
+            <div class="price">290.99 <span>350.99</span></div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero,
+              vitae.
+            </p>
+            <a href="#" class="btn"> Order now</a>
+          </div>
+        </div> -->
+      <!-- <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/blog-3.jpg" alt="" />
+            <h3><i class="fas fa-utensils"></i> Burger</h3>
+          </div>
+          <div class="content">
+            <div class="price">290.99 <span>350.99</span></div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero,
+              vitae.
+            </p>
+            <a href="#" class="btn"> Order now</a>
+          </div>
+        </div> -->
+      <div class="box" data-aos="fade-up">
+        <div class="image">
+          <img src="http://localhost:8000///images/tiffin.png3.png" alt="" />
+          <h3><i class="fas fa-utensils"></i>Small</h3>
+        </div>
+        <div class="content">
+          <div class="price">60.00 <span>80.00</span></div>
+          <p>This Is Regular Food included 4 chapati, Dal Fry,
+            Rice, Salad, Chole Puri, Kheer, paneer (once in a
+            week)</p>
+          <a href="/tiffinform/small/60" class="btn"> Order now</a>
+        </div>
+      </div>
+
+      <div class="box" data-aos="fade-up">
+        <div class="image">
+          <img src="http://localhost:8000///images/tiffin.png2.png" alt="" />
+          <h3><i class="fas fa-utensils"></i>medium</h3>
+        </div>
+        <div class="content">
+          <div class="price">80.00 <span>100.00</span></div>
+          <p> In this Tiffin, You get More Quantity of food.
+          </p>
+          <a href="#" class="btn disabled" disabled onclick="a1()"> Order now</a>
+        </div>
+      </div>
+
+      <div class="box" data-aos="fade-up">
+        <div class="image">
+          <img src="http://localhost:8000///images/tiffin.png1.png" alt="" />
+          <h3><i class="fas fa-utensils"></i>Large</h3>
+        </div>
+        <div class="content">
+          <div class="price">100.00 <span>120.00</span></div>
+          <p> You get More + Extra Quantity of food. </p>
+
+          <a href="#" class="btn " onclick="a1()" disabled>
+            Order now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function a1() {
+      let alt = alert('Currently This is Not Available. This will be open in Future Soon.');
+      window.location = 'tiffinform/small/60'
+    }
+  </script>
+  <!-- packages section ends -->
+
+  <section class="home" id="home">
+    <div class="image" data-aos="fade-down">
+      <img src="http://localhost:8000///images/maa.jpg" alt="" />
+    </div>
+
+    <div class="content" data-aos="fade-up">
+      <h3>Tasty Tiffins: Healthy & Homemade Meals Delivered to
+        You</h3>
+      <p>
+        "Healthy & Homemade Meals made by women and delivered to
+        you"
+        is a meal delivery service that offers healthy,
+        homemade meals that are prepared by women in their own
+        kitchens and delivered directly to customers' doorsteps.
+        Here's how the service works:
+      </p>
+      <!-- <a href="#" class="btn">explore now</a> -->
+    </div>
+  </section>
+
+  <!-- pricing section starts  -->
+
+  <!-- <section class="pricing" id="pricing">
+      <h1 class="heading">our <span>pricing</span></h1>
+
+      <div class="box-container">
+        <div class="box" data-aos="zoom-in-up">
+          <h3>basic plan</h3>
+          <div class="price">
+            <span>$</span>
+            <span class="amount">30</span>
+            <span>/mo</span>
+          </div>
+          <ul>
+            <li>10 days</li>
+            <li>food and drinks</li>
+            <li>safty guide</li>
+            <li>insurance</li>
+            <li>luxury hotel</li>
+          </ul>
+          <a href="#" class="btn">choose plan</a>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up">
+          <h3>standard plan</h3>
+          <div class="price">
+            <span>$</span>
+            <span class="amount">50</span>
+            <span>/mo</span>
+          </div>
+          <ul>
+            <li>20 days</li>
+            <li>food and drinks</li>
+            <li>safty guide</li>
+            <li>insurance</li>
+            <li>luxury hotel</li>
+          </ul>
+          <a href="#" class="btn">choose plan</a>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up">
+          <h3>premium plan</h3>
+          <div class="price">
+            <span>$</span>
+            <span class="amount">90</span>
+            <span>/mo</span>
+          </div>
+          <ul>
+            <li>30 days</li>
+            <li>food and drinks</li>
+            <li>safty guide</li>
+            <li>insurance</li>
+            <li>luxury hotel</li>
+          </ul>
+          <a href="#" class="btn">choose plan</a>
+        </div>
+      </div>
+    </section> -->
+  <!-- pricing section ends -->
+
+  <!-- review section starts  -->
+
+  <section class="review" id="review">
+    <h1 class="heading">client's <span>review</span></h1>
+
+    <div class="swiper-container review-slider" data-aos="zoom-in">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+
+          <h3>Ravi kumari</h3>
+          <p>
+            The taste, freshness, and quality of the food would
+            be a key aspect of any review. Customers would be
+            likely to comment on the flavor of the dishes, the
+            quality of ingredients, and the overall presentation
+            of the food.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- review section ends -->
+
+  <!-- contact section starts  -->
+
+  <section class="contact" id="contact">
+    <h1 class="heading"><span>contact</span> us</h1>
+
+    <form action="/contact" method="post" data-aos="zoom">
+      <div class="inputBox">
+        <input type="text" placeholder="name" data-aos="fade-up" name="name" required />
+        <input type="email" placeholder="email" name="email" data-aos="fade-up" required />
+      </div>
+
+      <div class="inputBox">
+        <input type="number" placeholder="number" name="number" data-aos="fade-up" required />
+        <input type="text" placeholder="subject" required name="subject" data-aos="fade-up" />
+      </div>
+
+      <textarea placeholder="your message" name="message" id="" cols="30" rows="10" required
+        data-aos="fade-up"></textarea>
+
+      <input type="submit" value="send message" class="btn" />
+    </form>
+  </section>
+
+  <!-- contact section ends -->
+
+  <!-- blog section starts  -->
+
+  <!-- <section class="blogs" id="blogs">
+      <h1 class="heading">our <span>blogs</span></h1>
+
+      <div class="box-container">
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/img1.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>What is Barilly and Tiffin?</h3>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+              <a href="#"> <i class="fas fa-calendar"></i> 1st jan, 2021 </a>
+              <a href="#"> <i class="fas fa-user"></i> by admin </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/img2.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>How many types of tiffin are there?</h3>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+              <a href="#"> <i class="fas fa-calendar"></i> 1st jan, 2021 </a>
+              <a href="#"> <i class="fas fa-user"></i> by admin </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/img3.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Did you know some facts about tiffin?</h3>
+            <a href="#" class="btn">read more</a>
+            <div class="icons">
+              <a href="#"> <i class="fas fa-calendar"></i> 1st jan, 2021 </a>
+              <a href="#"> <i class="fas fa-user"></i> by admin </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  <!-- blog section ends -->
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+    <div class="box-container">
+      <div class="box" data-aos="fade-up">
+        <h3>our branches</h3>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i>
+          Satellite </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i>
+          Company Garden </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i> RTO
+          OFFICE </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i>Rajender
+          Nagar </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i> Civil
+          Line </a>
+        <a href="#"> <i class="fas fa-map-marker-alt"></i>
+          Buttler </a>
+      </div>
+
+      <div class="box" data-aos="fade-up">
+        <h3>quick links</h3>
+        <a href="#home"> <i class="fas fa-chevron-right"></i>
+          home
+        </a>
+        <a href="#packages"> <i class="fas fa-chevron-right"></i>
+          packages
+        </a>
+        <!-- <a href="#"> <i class="fas fa-chevron-right"></i> pricing </a> -->
+        <a href="#review"> <i class="fas fa-chevron-right"></i>
+          review
+        </a>
+        <a href="#contact"> <i class="fas fa-chevron-right"></i>
+          contact </a>
+        <a href="/policy"> <i class="fas fa-chevron-right"></i>
+          policy
+        </a>
+        <!-- <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a> -->
+      </div>
+
+      <div class="box" data-aos="fade-up">
+        <h3>contact info</h3>
+        <a href="tel:+918081312194"> <i class="fas fa-phone"></i>
+          8081312194
+        </a>
+        <a href="mailto:mom-food@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          mom-food@gmail.com
+
+        </a>
+        <a href="#">
+          <i class="fas fa-map-marker-alt"></i> Bareilly ,
+          india,
+        </a>
+      </div>
+
+      <div class="box" data-aos="fade-up">
+        <h3>follow us</h3>
+        <a
+          href="https://www.facebook.com/people/Rohan-Gupta/pfbid0hxTMccrMiKGX87xS5qGGz4Tj6mV8jhsWaCj2aVAugUijYnLcchjhMnH1WqkESkR3l/?mibextid=ZbWKwL">
+          <i class="fab fa-facebook-f"></i> facebook
+        </a>
+        <!-- <a href="#"> <i class="fab fa-twitter"></i> twitter </a> -->
+        <a href="https://www.instagram.com/momfood629/"> <i class="fab fa-instagram"></i> instagram </a>
+        <!-- <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a> -->
+        <!-- <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a> -->
+      </div>
+    </div>
+    <!-- 
+      <div class="credit">
+        creadet by <span>Mystery Code</span> | all rights reserved
+      </div>
+    </section> -->
+    <!-- footer section ends -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- custom js file cdn link  -->
+    <script src="http://localhost:8000///js/index.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        delay: 400,
+      });
+    </script>
+</body>
+
+</html>

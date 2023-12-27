@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- CodingMaker-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!--CSS Style-->
+    <!-- <link
+      rel="stylesheet"
+       href="http://localhost:8000///css/login.css"
+    />  -->
+    <link rel="stylesheet" href="http://localhost:8000///css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      background-color: white;
+    }
+    .form {
+      background: gray;
+      box-shadow: inset;
+    }
+
+    .inputbox span {
+      color: black;
+    }
+    .form h2 {
+      color: black;
+    }
+    .form h2 {
+      color: black;
+    }
+    input[type="submit"] {
+      color: black;
+      background: white;
+    }
+  </style>
+
+  <body>
+    <div class="box">
+      <form class="form" method="post">
+        <h2>Log in</h2>
+        <div class="inputbox">
+          <input type="email" required="required" name="email" />
+          <span>Email </span>
+          <i></i>
+        </div>
+        <!-- <div class="inputbox">
+          <input type="number" required="required" name="phone" /> change by me
+          <span>Phone</span>
+          <i></i>
+        </div> -->
+
+        <div class="inputbox">
+          <input type="password" required="required" name="password" />
+          <span>Password</span>
+          <i></i>
+        </div>
+
+        <div class="links">
+          <a href="/forgotPassword"> Forgot Password</a>
+          <a href="/signup">Signup</a>
+        </div>
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>
